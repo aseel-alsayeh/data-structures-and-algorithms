@@ -54,6 +54,10 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+  let odds = arr.filter( function(n,i) {
+    return (n % 2);
+  });
+  return odds;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,7 +70,18 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
-};
+  let elements= forbiddenValues.map(function(n,i){
+    return n[i];
+  })
+  let newArray=[];
+arr.filter((element, index) => { 
+  if (element[index] !== elements[i]){
+    newArray.push(element[index])
+  }
+  return newArray;
+})
+
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
